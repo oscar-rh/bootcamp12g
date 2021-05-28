@@ -1,0 +1,42 @@
+*{
+    color:white;
+}
+
+body {
+        background-color: hsl(233, 47%, 7%);
+        font-size: 15px;
+        font-family: [Inter](https://fonts.google.com/specimen/Inter);
+}
+
+article {
+    
+    width: 50%;  
+    height: 50%; 
+    float: left; 
+    background-color:hsl(244, 38%, 16%);
+    color: hsla(0, 0%, 100%, 0.75)
+}
+
+img {     
+    height: 50%;
+    width: 50%;        
+    opacity: 0.7;
+    float: right;     
+   
+}
+
+main{
+    padding: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
