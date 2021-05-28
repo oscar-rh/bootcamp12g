@@ -1,3 +1,42 @@
 * {
     font-family:arial;
 }
+
+header { background-color: aqua;  
+    padding: 15px;       
+    margin-bottom: 15px; 
+}
+
+nav { background-color: fuchsia;        
+    padding: 15px;     
+}
+
+section { background-color: cornflowerblue ; 
+    padding: 15px; 
+    margin-bottom: 15px; 
+    float: left;
+    width: 45%;  
+    height: 300px;  
+
+
+
+}
+
+article {  background-color: plum;
+    padding: 15px;     
+}
+
+aside {  background-color: palevioletred  ; 
+    padding: 15px;  
+    margin-bottom: 15px;      
+    float: right;
+    width: 45%;
+    height: 300px
+}
+
+footer { background-color: mediumpurple;
+    padding: 15px;    
+    width: 97%;
+    float:left ; 
+}
+
