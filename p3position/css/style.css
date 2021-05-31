@@ -1,0 +1,90 @@
+
+ 
+    body{
+
+        background-color:blue;
+        box-sizing: border-box;
+        margin:0;
+        padding:0;   
+
+    }
+
+
+    .contenedor {
+        position: relative;
+        width: 50vw; 
+        height: 50vh;         
+        border:1px ;
+        border-style: solid;
+        border-color: coral;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25vh;      
+        background-color: darkblue;        
+    }
+
+    .circulo {
+
+        position: absolute;
+        width:30px;
+        height:30px;
+        border:1px;
+        border-radius: 50%;        
+        border-style: solid;        
+
+    }
+
+
+    .circuloarriba {
+     
+        border-color: yellow;
+        left: calc( 50% - 15px);
+        top: 20px;
+        
+    
+    }
+    
+   .circuloabajo {
+     
+        border-color: orange;        
+        left: calc( 50% - 15px);
+        bottom: 20px;
+        
+    
+   }
+
+   .circuloizquierdo {
+     
+    border-color: green;        
+    left: 20px; 
+    top: calc( 50% - 15px);
+    
+
+}
+
+.circuloderecho {
+     
+    border-color: pink;        
+    right: 20px; 
+    top: calc( 50% - 15px);
+    
+
+}
+
+
+
+  
+.cuadrado {
+
+    position: absolute;
+    width:40px;
+    height:40px;
+    border:1px;    
+    border-color: red;
+    border-style: solid;   
+    left: calc( 50% - 20px);
+    top: calc( 50% - 20px);
+
+
+}
+
