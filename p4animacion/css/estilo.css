@@ -1,0 +1,21 @@
+.imagen{
+ 
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;    
+}
+ 
+@keyframes animar {
+    from  { 
+        transform:rotate(0deg) ;  
+    }
+    to    { 
+        transform:rotate(360deg) 
+    }
+}
+ 
+form input#apagador:checked + div{
+     
+    animation: animar 5s infinite ;
+    
+}
