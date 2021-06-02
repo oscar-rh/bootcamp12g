@@ -1,0 +1,50 @@
+ul {
+
+    padding-left: 0;
+    list-style: none;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+}
+
+nav{
+
+    background-color: peru;
+}
+
+header{
+    display:flex;
+    background-color: rebeccapurple;
+}
+
+main{
+
+    background-color: green;
+    width: 100vw;
+    display:flex;
+}
+
+section {
+    background-color: yellow;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+aside {
+
+    background-color: pink;
+    width: 30%;
+}
+
+footer{
+    width: 100%;
+    background-color:tomato;
+}
+
+
