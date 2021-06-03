@@ -63,6 +63,13 @@ main
                 font-size: 9px;
 
             }
+
+            label {
+                color: lightgrey;
+                font-family: 'Big Shoulders Display', cursive;
+                font-size: 1.6rem;
+
+            }
             
         
 
@@ -96,7 +103,7 @@ main
 
             button{
                 
-                color: $verde;
+                color:   $verde;  
             }
    
         }
@@ -107,7 +114,7 @@ main
             button{
                 
                
-                color: $verdeobscuro
+                color:  $verdeobscuro 
             }
    
         }
@@ -125,7 +132,7 @@ main
             flex-direction: row;
             justify-content: center;
 
-            height: 50%;  
+            height: 70%;  
             width:80%;  
             max-width: unset;
 
@@ -148,16 +155,22 @@ main
                 }
 
                 p{
-                     font-size: 11px;
+                     font-size: 1.2rem;
+    
+                }
+
+                label {
+                    
+                    font-size: 2.5rem;
     
                 }
 
 
                 button{
-                    color:hsla(0, 0%, 100%, 0.75);
+                    
                     font-family: 'Lexend Deca', sans-serif;
                     border-radius: 20px;
-                    border: transparent;
+                    
                     font-size: 12px;
                     width:100px;
                     height:40px;
