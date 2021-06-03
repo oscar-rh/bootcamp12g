@@ -77,7 +77,8 @@ main section div p {
 }
 
 main section div label {
-  color: lightgrey;
+  /*color: lightgrey;*/
+  color: #f2f2f2;
   font-family: 'Big Shoulders Display', cursive;
   font-size: 1.6rem;
 }
@@ -163,7 +164,7 @@ main section #luxury button {
     font-family: 'Lexend Deca', sans-serif;
     border-radius: 20px;
     font-size: 12px;
-    width: 100px;
+    width: 140px;
     height: 40px;
   }
 }
