@@ -17,6 +17,7 @@ main
     justify-content: center;
     align-items: center;        
     height: 100vh;
+    
 
     section
     {
@@ -27,7 +28,7 @@ main
         align-items: center;   
         height: 90%;  
         width:100%;   
-        
+        max-width: 500px;
         
         div{
             height: 33%;
@@ -125,7 +126,8 @@ main
             justify-content: center;
 
             height: 50%;  
-            width:80%;   
+            width:80%;  
+            max-width: unset;
 
             div{
                 height:90%;

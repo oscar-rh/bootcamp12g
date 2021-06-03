@@ -38,6 +38,7 @@ main section {
           align-items: center;
   height: 90%;
   width: 100%;
+  max-width: 500px;
 }
 
 main section div {
@@ -122,6 +123,7 @@ main section #luxury button {
             justify-content: center;
     height: 50%;
     width: 80%;
+    max-width: unset;
   }
   main section div {
     height: 90%;
