@@ -1,6 +1,4 @@
 .flex-wrapper{
-    width:80%;
-    height:20vh;
     border:1px solid red;
     margin:10px auto;
     display: flex;
