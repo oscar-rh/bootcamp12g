@@ -29,7 +29,8 @@ body {
 .card {
   z-index: -5;
   position: relative;
-  margin: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   border-radius: 6px;
 }
 
