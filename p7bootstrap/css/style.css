@@ -38,8 +38,11 @@ body {
 }
 
 .card-width {
-  width: 100vw;
-  max-width: 20rem;
+  /*
+    width: 100vw;
+    
+    max-width: 20rem;
+    */
 }
 
 .texto-blanco {
