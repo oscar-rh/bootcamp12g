@@ -7,7 +7,12 @@ $white: hsl(0, 0%, 100%);
 $Light-gray: hsl(0, 0%, 81%);
 $Light-grayish-blue: hsl(210, 46%, 95%);
 
+*{
 
+    border:0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 
 body{
@@ -41,8 +46,13 @@ body{
 .card{
 
     z-index: -5;
-
+    position:relative;
+    margin: 1rem;
+    border-radius: 6px;
+    
 }
+
+
 
 .card-body{
 
@@ -108,6 +118,8 @@ body{
     z-index: 1;
     top:0;
     right:1.5rem;
+    height: 25%;
+    width: 30%;
 
 }
 
@@ -119,11 +131,7 @@ body{
 }
 
 
-.card-bottom-margin
-{
-    margin: 1rem;
 
-}
 
 .card-header-wrapper{
     display: flex;
