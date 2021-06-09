@@ -23,6 +23,10 @@ body {
   z-index: -5;
 }
 
+.card-body {
+  position: relative;
+}
+
 .card-width {
   width: 100vw;
   max-width: 20rem;
