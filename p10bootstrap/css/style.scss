@@ -9,22 +9,16 @@ $white: hsl(0, 0%, 100%);
 
 body{
 
-    
     background-repeat: no-repeat;
-    background-image: url(../img/bg-pattern-top-desktop.svg)  ; 
-
- 
-
-}
-
-.centrado{
-
-    display: flex;
+    background-image: url(../img/bg-pattern-top-mobile.svg) , url(../img/bg-pattern-bottom-mobile.svg)  ; 
+    background-size: auto , 100%;
+    display:flex;
     align-items: center;
-    width: 100%;
+    height:100vh;    
 
 }
 
+/* TITULOS O ENCABEZADOS */
 .titles{
     font-family: 'Spartan', sans-serif;
     .main-title{
@@ -35,39 +29,13 @@ body{
     .main-subtitle{    
         font-size: 0.7rem;
         color:$dark-grayish-Magenta;
-
     }
 }
 
 
+/* SECCION DE ESTRELLAS */
 .stars-div-container{
-    /*
-    display: flex ;
-    flex-direction: column;
-    justify-content: space-evenly;
-    border: 1px solid red;
-    */
-        
-
-
-        /*.star-alignment{*/
-            /*
-            display: flex;            
-            &.izquierda{
-                
-                justify-content: flex-start;
-            }
-            &.centrado{
-                
-                justify-content: center;
-            }
-
-            &.derecha{
-                
-                justify-content: flex-end;
-            }
-            */
-
+   
             .star-div{
                 background-color: $light-grayish-magenta ;        
                 border-radius: 5px;
@@ -76,7 +44,7 @@ body{
                 align-items: center;    
                 margin-bottom: 2rem;         
                 .stars {
-                        /*padding: 0 3rem;*/
+                        padding: 0 2rem;
                         img{
                             width: 1rem;
                             height:  1rem;
@@ -84,28 +52,24 @@ body{
                 }          
                 .star-text{                    
                     font-size: 0.8rem;
+                    font-weight: bold;
                     color: $very-dark-magenta;
-                    /* padding-right: 4rem; */
+                    
                 }
 
             }
 
-       /*}*/
-
+      
           
 }
 
 
-.card-margen{
 
-   /* border: 1px solid red;    */
-}
-
+/* SECCION DE TARJETAS */
 .card {
 
     background-color: $very-dark-magenta;
     border-radius: 5px;
-    /*height:100%;    */
 
     .card-body{
 
@@ -137,7 +101,6 @@ body{
                     color:$soft-pink;
                     font-size: 0.7rem;
                     opacity: 0.5;
-    
                 }
 
             }    
@@ -145,7 +108,6 @@ body{
             img {
                 width: 50px;
                 height: 50px;
-                /*border: 2px solid $dark-grayish-Magenta;*/
                 border-radius: 50%;                
             }
         }
@@ -154,7 +116,7 @@ body{
     }
 }
 
-/*Desktop media query*/
+/* media query para version desktop*/
 @media only screen and ( min-width:992px ){
 
     .cardmiddle{
@@ -166,6 +128,13 @@ body{
         margin-top:4rem;
     }
 
+    body{
+
+        background-repeat: no-repeat;
+        background-image: url(../img/bg-pattern-top-desktop.svg) , url(../img/bg-pattern-bottom-desktop.svg)  ; 
+        background-size: auto , 100%;
+    
+    }
 
 }
 
