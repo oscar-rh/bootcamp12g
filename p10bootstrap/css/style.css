@@ -1,14 +1,9 @@
+@charset "UTF-8";
 body {
   background-repeat: no-repeat;
   background-image: url(../img/bg-pattern-top-mobile.svg), url(../img/bg-pattern-bottom-mobile.svg);
+  /* tamaño del fonto alto automatico y ancho al 100% lo pongo al 100 para que cubra toda la pantalla si se abre a lo ancho*/
   background-size: auto , 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100vh;
 }
 
 /* TITULOS O ENCABEZADOS */
@@ -28,6 +23,10 @@ body {
 }
 
 /* SECCION DE ESTRELLAS */
+.stars-div-container {
+  /* contenedor de las estrellas: estrellas y texto  */
+}
+
 .stars-div-container .star-div {
   background-color: #f7f2f7;
   border-radius: 5px;
@@ -76,6 +75,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   font-size: 0.8rem;
+  /* colores de los textos en las tarjetas */
+  /* para redondear imagen */
 }
 
 .card .card-body .card-header .card-data {
@@ -110,6 +111,7 @@ body {
 
 /* media query para version desktop*/
 @media only screen and (min-width: 992px) {
+  /* para bajar tarjetas en escalera */
   .cardmiddle {
     margin-top: 2rem;
   }
@@ -117,9 +119,17 @@ body {
     margin-top: 4rem;
   }
   body {
+    /* para pintar los fondos desktop */
     background-repeat: no-repeat;
     background-image: url(../img/bg-pattern-top-desktop.svg), url(../img/bg-pattern-bottom-desktop.svg);
-    background-size: auto , 100%;
+    /* para que lo centre */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100vh;
   }
 }
 /*# sourceMappingURL=style.css.map */

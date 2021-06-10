@@ -11,10 +11,10 @@ body{
 
     background-repeat: no-repeat;
     background-image: url(../img/bg-pattern-top-mobile.svg) , url(../img/bg-pattern-bottom-mobile.svg)  ; 
+
+    /* tamaño del fonto alto automatico y ancho al 100% lo pongo al 100 para que cubra toda la pantalla si se abre a lo ancho*/
     background-size: auto , 100%;
-    display:flex;
-    align-items: center;
-    height:100vh;    
+
 
 }
 
@@ -35,7 +35,8 @@ body{
 
 /* SECCION DE ESTRELLAS */
 .stars-div-container{
-   
+
+            /* contenedor de las estrellas: estrellas y texto  */
             .star-div{
                 background-color: $light-grayish-magenta ;        
                 border-radius: 5px;
@@ -59,7 +60,6 @@ body{
 
             }
 
-      
           
 }
 
@@ -84,6 +84,7 @@ body{
             display:flex;
             font-size: 0.8rem;
 
+            /* colores de los textos en las tarjetas */
             .card-data{
                 display:flex;
                 flex-direction: column;
@@ -104,7 +105,7 @@ body{
                 }
 
             }    
-
+            /* para redondear imagen */
             img {
                 width: 50px;
                 height: 50px;
@@ -119,6 +120,7 @@ body{
 /* media query para version desktop*/
 @media only screen and ( min-width:992px ){
 
+    /* para bajar tarjetas en escalera */
     .cardmiddle{
         margin-top:2rem;
 
@@ -129,10 +131,15 @@ body{
     }
 
     body{
-
+        /* para pintar los fondos desktop */
         background-repeat: no-repeat;
         background-image: url(../img/bg-pattern-top-desktop.svg) , url(../img/bg-pattern-bottom-desktop.svg)  ; 
-        background-size: auto , 100%;
+
+        /* para que lo centre */
+        display:flex;
+        align-items: center;
+        height:100vh;    
+            
     
     }
 
