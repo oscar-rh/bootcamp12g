@@ -30,18 +30,14 @@ body {
 .card {
   z-index: -5;
   position: relative;
-  margin: 1rem;
+  /*margin: 1rem;*/
   border-radius: 6px;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
 }
 
 .card-body {
   position: relative;
-}
-
-.card-width {
-  /*
-    max-width: 20rem;
-   */
 }
 
 .texto-blanco {
@@ -52,7 +48,7 @@ body {
   position: relative;
 }
 
-.text-paragrapth-2 {
+.texto-parrafo-2 {
   color: #cfcfcf;
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-size: 13px;
