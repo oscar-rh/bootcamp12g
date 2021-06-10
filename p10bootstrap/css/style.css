@@ -9,17 +9,20 @@ body {
 /* TITULOS O ENCABEZADOS */
 .titles {
   font-family: 'Spartan', sans-serif;
+  text-align: center;
 }
 
 .titles .main-title {
   font-size: 2rem;
   color: #502050;
   font-weight: 900;
+  padding: 0 3rem;
 }
 
 .titles .main-subtitle {
   font-size: 0.7rem;
   color: #937b92;
+  padding: 1rem 2rem;
 }
 
 /* SECCION DE ESTRELLAS */
@@ -111,6 +114,15 @@ body {
 
 /* media query para version desktop*/
 @media only screen and (min-width: 992px) {
+  .titles {
+    text-align: left;
+  }
+  .titles .main-title {
+    padding: 0;
+  }
+  .titles .main-subtitle {
+    padding: 0;
+  }
   /* para bajar tarjetas en escalera */
   .cardmiddle {
     margin-top: 2rem;

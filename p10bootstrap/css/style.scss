@@ -21,14 +21,19 @@ body{
 /* TITULOS O ENCABEZADOS */
 .titles{
     font-family: 'Spartan', sans-serif;
+    text-align: center;    
     .main-title{
             font-size: 2rem;
             color:$very-dark-magenta;
             font-weight: 900;
+            padding: 0 3rem;
+        
     }
     .main-subtitle{    
         font-size: 0.7rem;
         color:$dark-grayish-Magenta;
+        padding: 1rem 2rem;
+
     }
 }
 
@@ -119,6 +124,21 @@ body{
 
 /* media query para version desktop*/
 @media only screen and ( min-width:992px ){
+
+
+    .titles{        
+        text-align: left;
+
+        .main-title{
+            padding: 0;
+        
+        }
+        .main-subtitle{    
+            padding: 0;
+
+        }
+
+    }
 
     /* para bajar tarjetas en escalera */
     .cardmiddle{
