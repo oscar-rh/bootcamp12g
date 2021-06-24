@@ -17,5 +17,13 @@
 form input#apagador:checked + div{
      
     animation: animar 5s infinite ;
-    
+
+
+
 }
+
+
+ 
+form input#mostar:checked + div{     
+    display:none;
+    }

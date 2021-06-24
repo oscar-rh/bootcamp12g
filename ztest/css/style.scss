@@ -1,0 +1,37 @@
+
+
+#checkboxMostrar:checked ~ div.menu-adicional{
+    display: block;
+}
+
+#checkboxMostrar {
+
+    display: none;
+}
+
+#checkboxMostrar:checked {
+
+    +label::before{
+    content : "Code of conduct";
+    }
+
+    +label {
+        span {
+            display: none;
+        }
+
+    }
+   
+}
+
+.menu-oculto{
+    display: none;
+}
+
+
+.checkbox-wrapper {
+    div ul li{
+        padding-left: 0;
+        display: flex;
+    }
+}
