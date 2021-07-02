@@ -10,11 +10,13 @@ btnGuardar.addEventListener("click", () => {
 
     arrayMentors.push(mentor)
 
+    // limpiamos los controles una vez que ya se guardo el objeto en el areglo
     document.getElementById("nombre").value= ""
     document.getElementById("apellidos").value = ""
 
+    // desplegamos la tabla
     cleanTable()
-    printTable(arrayMentors)
+    displayTable(arrayMentors)
 
 })
 
@@ -25,7 +27,7 @@ function cleanTable(){
 }
 
 
-const printTable = personArray => {
+const displayTable = personArray => {
     
     personArray.forEach( 
         (person, index) =>  {
@@ -48,6 +50,8 @@ const printTable = personArray => {
     
         let buttonText = document.createTextNode("Borrar")
         deleteButton.appendChild(buttonText)
+
+        // añadimos al boton de borrar un atribudo id con la posicion del elemento en el array 
         deleteButton.setAttribute("id", index)  
     
         buttonTd.appendChild(deleteButton)
@@ -63,13 +67,14 @@ const printTable = personArray => {
     
         document.getElementById("person-table").appendChild( personRow )
 
-
+        // añadimos al boton el Listener para que al presionarlo el boton traiga el id a borrar en el array
         deleteButton.addEventListener ("click", (event ) => { 
             
             let id =  event.target.id 
             arrayMentors.splice(id,1)
+            // volvemos a pintar la tabla con el arreglo como quedo
             cleanTable()
-            printTable(arrayMentors)
+            displayTable(arrayMentors)
         
         })
     
