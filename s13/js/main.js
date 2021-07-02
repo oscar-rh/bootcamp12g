@@ -139,7 +139,54 @@ var mentorsArray = [
   
     return { htmlAverage, cssAverage, jsAverage, reactAverage }
   }
+  //console.log(getMentorsScores(mentorsArray))
+
+ // FUNCION PARA OBTENER DE UN ARREGLO LA CALIFICACION DE CUALQUIER MATERIA
+ const getScoreBySignature = ( arraySignatures , signature ) =>   arraySignatures.filter (  Signature  =>  Signature.signature == signature )[0].score
+
+  const getMentorsScores2 =  arrMentor => {
+    let mentorsQty = arrMentor.length
+    let htmlTotal = 0;
+    let cssTotal = 0;
+    let jsTotal = 0;
+    let reactTotal = 0;
+        arrMentor.forEach ( mentor => {
+        htmlTotal += getScoreBySignature (mentor.scores, 'HTML')
+        cssTotal += getScoreBySignature (mentor.scores, 'CSS')
+        jsTotal += getScoreBySignature (mentor.scores, 'JS')    
+        reactTotal += getScoreBySignature (mentor.scores, 'ReactJS')           
+        } 
+      )
+    let htmlAverage = htmlTotal / mentorsQty
+    let cssAverage = cssTotal /  mentorsQty
+    let jsAverage = jsTotal /  mentorsQty
+    let reactAverage = reactTotal /  mentorsQty
+    return { htmlAverage, cssAverage, jsAverage, reactAverage }
+  }
+
+  console.log("1.- ",  getMentorsScores2(mentorsArray))
   
+ /*
+    {
+                let objSignature = []                
+                objSignature = arraySignatures.filter (  Signature  => 
+                      {                            
+                            return (Signature.signature == signature)                                                           
+                      }
+                 )
+                 console.log(objSignature)
+                 return objSignature[0].score
+    }
+    */
+
+    /*
+    console.log ( "calificacion HTML" ,  getScoreBySignature(mentorsArray[0].scores , 'HTML') )
+    console.log ( "calificacion CSS" ,  getScoreBySignature(mentorsArray[1].scores , 'CSS') )
+    */
+
+
+    /***    2.- ******************************** */
+
   const getMentorAverage = scoresArray => {
     let scoreTotal = 0;
     let signaturesQty = scoresArray.length
@@ -151,7 +198,40 @@ var mentorsArray = [
     // console.log('promedio del mentor:', mentorAverage )
     return mentorAverage
   }
+    // console.log(getMentorAverage(mentorsArray[0].scores))
+    // console.log(getMentorAverage(mentorsArray[1].scores))
+   
+    /*
+     // primera version 
+     const getMentorAverageUsingReduce =  scoresArray => {
+          let arrayOnlyScores = []
+          let sumResult = 0
+          let average  = 0
+          arrayOnlyScores = scoresArray.map( signature => {
+                          return signature.score
+                            })
+
+          sumResult = arrayOnlyScores.reduce (   (total, calif)  => {
+                    return total + calif }                    
+              )          
+              average = sumResult / scoresArray.length
+          return average               
+
+    } */ 
+
+    const getMentorAverageUsingReduce = scoresArray => (    scoresArray.map(signature  =>  signature.score )   ).reduce(  (total, calif) => (total + calif)  ) / scoresArray.length         
+    //console.log("getMentorAverageUsingReduce: ", getMentorAverageUsingReduce(mentorsArray[0].scores))
+
+    const printAveragePerMentor = arrMentors =>  arrMentors.forEach(   mentor =>  console.log( "2.-",  mentor.name,  getMentorAverageUsingReduce(mentor.scores))   )        
+    printAveragePerMentor(mentorsArray)
+
+    
+      /*******************************gti* */
+
+
+
   
+    /** 3.-     ****************************** */
   const createLabelsArray = mentorsData => {
     let labelsArray = []
     mentorsData.forEach(mentor => {
@@ -164,7 +244,23 @@ var mentorsArray = [
     console.log(labelsArray)
     return labelsArray
   }
-  
+
+  /*  1a version
+  const createLabelsArrayUsingMap = mentorsData => {
+      return   mentorsData.map(  (mentor) => {
+                  return `Hola, soy ${mentor.name} y mi promedio es de ${getMentorAverage(mentor.scores)}`       
+               })
+  }
+  console.log("createLabelsArrayUsingMap " , createLabelsArrayUsingMap( mentorsArray ))
+  */
+  const createLabelsArrayUsingMap = mentorsData =>  mentorsData.map(  (mentor) => `Hola, soy ${mentor.name} y mi promedio es de ${getMentorAverage(mentor.scores)}` )
+  console.log( "3.- createLabelsArrayUsingMap", createLabelsArrayUsingMap( mentorsArray ))
+
+  /******************************** */
+
+
+
+  /***  4.----     ***************************** */  
   const getHighestAverages = mentorsData => {
     let highestsAverages = []
     mentorsData.forEach(mentor => {
@@ -176,6 +272,52 @@ var mentorsArray = [
     console.log(highestsAverages)
     return highestsAverages
   }
+
+  /*  1a version
+  const getHighestAveragesUsingFilter = mentorsData =>{
+      return mentorsData.filter (  mentor => {
+              return getMentorAverage(mentor.scores) > 9 
+     } )  
+  }
+  console.log( "getHighestAveragesUsingFilter" ,  getHighestAveragesUsingFilter( mentorsArray ))
+  */
+  const getHighestAveragesUsingFilter = mentorsData =>  mentorsData.filter(  mentor =>  getMentorAverage(mentor.scores) > 9 )    
+  console.log( "4.- getHighestAveragesUsingFilter ", getHighestAveragesUsingFilter( mentorsArray ))
+
+   /******************************** */
+
+  
+/*
+    crear un nuevo array con las inciales de cada mentor
+    [
+      "I. S. M."
+    ]
+  */
+
+    /* crear un nuevo array con los mentores cuyo nombre comience con <vocal></vocal>
+
+  */
+
+
+    const getMentorInitials = mentorsData => {  
+              let mentorName  
+              let initials = ""  
+              let arrayInitials =  mentorsData.map (  mentor => {
+                          mentorName = mentor.name.split(" ") 
+                           initials = ""
+                           mentorName.forEach ( partName => {
+                                        console.log(partName)    
+                                        initials = initials + partName.charAt(0) + "."  
+                                      }
+                            )
+                            return initials                   
+
+                      }  )
+              return arrayInitials
+    }
+
+    console.log( getMentorInitials(mentorsArray))
+  
   
   // getHighestAverages(mentorsArray)
   
@@ -259,9 +401,10 @@ var mentorsArray = [
     return bandNames
   }
 
+  /*
   console.log( "ej1.- Nombres de las bandas")
   console.log(getBandNames(songsData))
-
+*/
 
 
 
@@ -303,8 +446,10 @@ var mentorsArray = [
       })
       return bandSongs                      // al final la funcion regresa el arreglo [  { band: NombreBanda ,  listsongs: [ canciones ] }  ]   
   }
+  /*
   console.log( "ej2.- Canciones por Banda")
   console.log( getBandSongs(getBandNames(songsData),songsData ))  // 
+  */
   
   
   /* 
@@ -335,7 +480,8 @@ var mentorsArray = [
   getMostListened(songsData)
 
   let theMostListened = getMostListened(songsData)
-  console.log( "ej3 fuera f(x): Cancion mas escuchada (reproductions) '" + theMostListened.name + "' de la banda '" + theMostListened.band + "'"  )
+
+  // console.log( "ej3 fuera f(x): Cancion mas escuchada (reproductions) '" + theMostListened.name + "' de la banda '" + theMostListened.band + "'"  )
   
   
     /*
@@ -359,7 +505,7 @@ var mentorsArray = [
       }
       
     )
-    console.log( "ej4: Cancion mas gustada (likes) '" + mostLiked.name + "' de la banda '" + mostLiked.band + "'"  )
+    // console.log( "ej4: Cancion mas gustada (likes) '" + mostLiked.name + "' de la banda '" + mostLiked.band + "'"  )
     return mostLiked
   }
   
