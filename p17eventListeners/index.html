@@ -17,34 +17,41 @@
     </form>
     <script src="js/main.js"> </script>
 -->
-
+<div class="container-fluid">
     <form>
-        <div class="form-group ">
-          <label>Nombre</label>
-          <input type="text" class="form-control" id="nombre"  >          
-        </div>
-        <div class="form-group">
+      <div class="row">
+          <div class="form-group col-md-6 ">
+            <label>Nombre</label>
+            <input type="text" class="form-control" id="nombre"  >          
+          </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-6">
           <label>Apellidos</label>
           <input type="text" class="form-control" id="apellidos" >
         </div>
-        <button type="button" class="btn btn-primary"  id="guardar">Guardar</button>
+      </div>
+        <input type="hidden" id="indice">
+        <button type="button" class="btn btn-success"  id="guardar">Guardar</button>
+        <button type="button" class="btn btn-danger"  id="borrar">Borrar</button>
+        <button type="button" class="btn btn-primary"  id="limpiar">Limpiar</button>
       </form>
 
-      <table class="table table-dark" id="tabla">
-        <thead>
+      <table class="table  mt-5" id="tabla">
+        <thead class="table-dark">
           <tr>
             <th scope="col">#</th>
             <th scope="col">First</th>
             <th scope="col">Last</th>
             <th scope="col">&nbsp;</th>
+            <th scope="col">&nbsp;</th>
           </tr>
         </thead>
-        <tbody id="person-table">
-          
+        <tbody  id="person-table">          
         </tbody>
       </table>
 
-
+</div>
       <script src="js/main.js"> </script>
 
 
