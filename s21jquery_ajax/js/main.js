@@ -83,8 +83,9 @@ const displaySelected = (someId) => {
     let { name, specie, age, picture } = mascota
    
 
-    $(".modal-body").empty()
+    $(".modal-body").empty()   
     $(".modal-title").html(name)
+    
     let mascotaHtml = `
     <div class="card pet-card2" style="width: 18rem;">
     <img src="${picture}" class="card-img-top" alt="...">
@@ -113,7 +114,7 @@ const printAllPets = () => {
                 <h5 class="card-title">${name}</h5>
                 <p class="card-text">Especie: ${specie}</p>
                 <p class="card-text">Edad: ${age}</p>
-                <button type="submit" class="btn btn-primary btnDetalle" data-pet-key=${pet} data-toggle="modal" data-target="#exampleModal ">Detalle</button>
+                <button type="button" class="btn btn-primary btnDetalle" data-pet-key=${pet} data-toggle="modal" data-target="#exampleModal ">Detalle</button>
                 <a href="adoptForm.html?adoptKey=${pet}" class="btn btn-success adopt" data-pet-key=${pet}>Adoptame</a>
             </div>
             </div>
@@ -125,16 +126,13 @@ const printAllPets = () => {
     }
 
     $('.btnDetalle').click( (event)=>{
+        //console.log(event)
         let id = $(event.target).data("pet-key")
         // console.log("id", $(event.target).data("pet-key"))
         displaySelected (id)
     } )
 
 }
-
-
-
-
 
 
 //Imprimimos todas las mascotas desde el principio
